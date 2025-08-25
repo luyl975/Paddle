@@ -15,7 +15,7 @@
 import unittest
 
 import numpy as np
-from op_test import OpTest, convert_float_to_uint16
+from op_test import OpTest, convert_float_to_uint16, get_places
 
 import paddle
 from paddle import base
@@ -320,7 +320,7 @@ class TestIndexSelectAPI_Compatibility(unittest.TestCase):
         np.random.seed(123)
         paddle.enable_static()
         self.places = get_places()
-        self.shape = [5, 6]
+        self.shape = [6, 6]
         self.dtype = 'int'
         self.init_data()
         self.index = [0, 1, 4]

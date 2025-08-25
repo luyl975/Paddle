@@ -17,7 +17,7 @@ from typing import TYPE_CHECKING
 
 import paddle
 from paddle import _C_ops
-from paddle._C_ops import one_hot
+from paddle._C_ops import one_hot # noqa: F401
 from paddle.utils.decorator_utils import param_one_alias
 
 from ...base.data_feeder import check_variable_and_dtype
